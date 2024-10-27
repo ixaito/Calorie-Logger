@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogAddMealFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddMealManually"
+            style="?attr/floatingActionButtonLargeStyle"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="90dp"
+            android:backgroundTint="@color/blockBackground"
+            app:fabCustomSize="140dp"
+            app:srcCompat="@drawable/ic_add_manually"
+            app:tint="@color/white"
+            android:contentDescription="Add meal manually"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddMealCamera"
+            style="?attr/floatingActionButtonLargeStyle"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:backgroundTint="@color/blockBackground"
+            app:fabCustomSize="140dp"
+            app:srcCompat="@drawable/ic_add_camera"
+            app:tint="@color/white"
+            android:contentDescription="Add meal camera"/>
+    </LinearLayout>
+
+</FrameLayout>
