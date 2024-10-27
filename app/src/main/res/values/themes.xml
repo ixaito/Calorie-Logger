@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UiJust" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="Theme.UiJust" parent="Base.Theme.UiJust" />
+
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Background color for the dialog -->
+        <item name="android:background">#1C1C1E</item> <!-- Dark background -->
+
+        <!-- Accent color for selected items -->
+        <item name="colorAccent">#FFAB40</item> <!-- Amber accent color -->
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">#FFFFFF</item> <!-- White text color -->
+        <item name="android:textColorSecondary">#B0B0B0</item> <!-- Light gray for secondary text -->
+
+    </style>
+
+    <style name="camera" parent="Theme.Material3.DayNight">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
+</resources>

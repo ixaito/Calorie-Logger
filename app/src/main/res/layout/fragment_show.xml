@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".show">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bgCalories"
+            android:layout_width="320dp"
+            android:layout_height="315dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/rounded_rectangle"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/circularProgressCalories"
+            android:layout_width="276dp"
+            android:layout_height="235dp"
+            android:background="@android:color/transparent"
+            app:cs_circle_color="@color/mainColourShaded"
+            app:cs_circle_progress_color="@color/mainColour"
+            app:cs_circle_stroke_width="18dp"
+            app:cs_disable_pointer="true"
+            app:cs_end_angle="60"
+            app:cs_max="100"
+            app:cs_progress="20"
+            app:cs_start_angle="120"
+            app:layout_constraintBottom_toBottomOf="@id/bgCalories"
+            app:layout_constraintEnd_toEndOf="@id/bgCalories"
+
+            app:layout_constraintStart_toStartOf="@id/bgCalories"
+            app:layout_constraintTop_toTopOf="@id/bgCalories" />
+
+        <TextView
+            android:id="@+id/txtShowCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/circularProgressCalories"
+            app:layout_constraintEnd_toEndOf="@id/circularProgressCalories"
+            app:layout_constraintStart_toStartOf="@id/circularProgressCalories"
+            app:layout_constraintTop_toTopOf="@id/circularProgressCalories" />
+
+        <TextView
+            android:id="@+id/txtExplainCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="kcal Calories"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/txtShowCalories"
+            app:layout_constraintStart_toStartOf="@id/txtShowCalories"
+            app:layout_constraintTop_toBottomOf="@id/txtShowCalories" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabCheckMeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/blockBackground"
+            android:contentDescription="description"
+            android:text="@string/check_meal"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_nextarrow"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bgCalories" />
+
+        <include
+            layout="@layout/fragment_add_meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

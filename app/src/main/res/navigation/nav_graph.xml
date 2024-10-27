@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/show">
+
+    <fragment
+        android:id="@+id/show"
+        android:name="com.example.uijust.show"
+        android:label="fragment_show"
+        tools:layout="@layout/fragment_show" >
+        <action
+            android:id="@+id/showToMeal"
+            app:destination="@id/meal" />
+        <action
+            android:id="@+id/action_show_to_capture"
+            app:destination="@id/capture" />
+    </fragment>
+    <fragment
+        android:id="@+id/meal"
+        android:name="com.example.uijust.Meal"
+        android:label="fragment_meal"
+        tools:layout="@layout/fragment_meal" />
+    <fragment
+        android:id="@+id/capture"
+        android:name="com.example.uijust.capture"
+        android:label="fragment_capture"
+        tools:layout="@layout/fragment_capture" />
+</navigation>
