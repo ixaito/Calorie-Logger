@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".capture"
     android:theme="@style/camera"
-    >
+    tools:context=".capture">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-/>
+        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-
         >
+
+        <include layout="@layout/fragment_return"/>
 
         <ImageButton
             android:id="@+id/flash"
@@ -27,7 +26,8 @@
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_margin="16dp"
-            android:background="@drawable/ic_flash" />
+            android:background="@drawable/ic_flash"
+            android:contentDescription="Flash"/>
 
         <ImageButton
             android:id="@+id/flipCamera"
@@ -36,7 +36,8 @@
             android:layout_below="@id/flash"
             android:layout_alignParentEnd="true"
             android:layout_margin="16dp"
-            android:background="@drawable/ic_flip_camera" />
+            android:background="@drawable/ic_flip_camera"
+            android:contentDescription="Flip it"/>
 
         <ImageButton
             android:id="@+id/camera"
@@ -45,7 +46,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/ic_camera" />
+            android:background="@drawable/ic_camera"
+            android:contentDescription="Capture it"/>
 
     </RelativeLayout>
 

@@ -21,10 +21,21 @@
         android:id="@+id/meal"
         android:name="com.example.uijust.Meal"
         android:label="fragment_meal"
-        tools:layout="@layout/fragment_meal" />
+        tools:layout="@layout/fragment_meal" >
+        <action
+            android:id="@+id/action_meal_to_show"
+            app:destination="@id/show" />
+        <action
+            android:id="@+id/action_meal_to_capture"
+            app:destination="@id/capture" />
+    </fragment>
     <fragment
         android:id="@+id/capture"
         android:name="com.example.uijust.capture"
         android:label="fragment_capture"
-        tools:layout="@layout/fragment_capture" />
+        tools:layout="@layout/fragment_capture" >
+        <action
+            android:id="@+id/action_capture_to_show"
+            app:destination="@id/show" />
+    </fragment>
 </navigation>

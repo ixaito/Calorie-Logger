@@ -17,6 +17,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,9 @@ public class capture extends Fragment {
         }
     });
 
+    // return fragment
+    ImageButton btnReturn;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -67,6 +71,15 @@ public class capture extends Fragment {
                 cameraFacing = CameraSelector.LENS_FACING_BACK;
 
             startCamera(cameraFacing);
+        });
+
+        // navigate back to show
+        btnReturn = view.findViewById(R.id.btnReturn);
+        btnReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(requireParentFragment().requireView()).navigate(R.id.action_capture_to_show);
+            }
         });
         return view;
     }
